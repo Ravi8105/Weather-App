@@ -2,8 +2,8 @@
 <section class="section section--welcome">
 	<div class="col col--form">
 		<main class="content">
-			<h1 class="content__heading">Czy wiesz jaka jest pogoda?</h1>
-			<h6 class="content__description">Wpisz miejscowość i sprawdź pogodę</h6>
+			<h1 class="content__heading">Weather Information Report</h1>
+			<h6 class="content__description">Based on City location Search Getting Weather Report</h6>
 			<form class="form">
 				<input
 					type="text"
@@ -70,17 +70,17 @@
 				<img src="assets/images/sunrise.svg" alt="" class="sun__icon" />
 				<ul class="sun__items">
 					<li class="sun__item">
-						Wschód słońca:
+						Weather sunrise:
 						<time class="sun__sunrise">{{ currentWeather.sunrise }}</time>
 					</li>
 					<li class="sun__item">
-						Zachód słońca:
+						Weather sunset:
 						<time class="sun__sunset">{{ currentWeather.sunset }}</time>
 					</li>
 				</ul>
 			</div>
 		</div>
-		<h3 class="uppercase heading">Teraz</h3>
+		<h3 class="uppercase heading">Weather Description</h3>
 		<div class="box">
 			<div class="col">
 				<img [src]="currentWeather.icon" alt="" class="current-weather__icon" />
@@ -95,35 +95,35 @@
 				<div class="current-weather">
 					<ul class="current-weather__items">
 						<li class="current-weather__item">
-							Temperatura odczuwalna:
+							PerceivedTempreture:
 							<span class="current-weather__feels-like">{{
 								currentWeather.perceivedTempreture | number: '1.0-1'
 							}}</span
 							><sup> o</sup>C
 						</li>
 						<li class="current-weather__item">
-							Ciśnienie:
+							Pressure:
 							<span class="current-weather__pressure">{{
 								currentWeather.pressure | number: '1.0-0'
 							}}</span>
 							hPa
 						</li>
 						<li class="current-weather__item">
-							Wilgotność powietrza:
+							Humidity:
 							<span class="current-weather__humidity">{{
 								currentWeather.humidity | number: '1.0-1'
 							}}</span>
 							%
 						</li>
 						<li class="current-weather__item">
-							Widoczność:
+							Visibility :
 							<span class="current-weather__visibility">{{
 								currentWeather.visibility | number: '1.0-1'
 							}}</span>
 							km
 						</li>
 						<li class="current-weather__item">
-							Wiatr:
+							WindSpeed:
 							<span class="current-weather__wind-speed">{{
 								currentWeather.windSpeed | number: '1.0-1'
 							}}</span>
@@ -133,24 +133,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="col city-image"></div>
-
-	<h3 class="uppercase heading heading--forecast">Prognoza pogody 16-dniowa</h3>
-
-	<div class="forecast" *ngFor="let item of forecastWeather.data">
-		<span class="forecast__date">{{ item?.datetime }}</span>
-		<img
-			class="forecast__icon"
-			src="{{ iconsURL }}{{ item.weather.icon }}.svg"
-		/>
-		<span class="forecast__name">{{ item?.weather.description }}</span>
-		<span class="forecast__temp">{{ item?.temp }} <sup>o</sup>C</span>
-	</div>
-
-	<div class="cta" (click)="scrollToTop()">
-		<span class="cta__copy"> Sprawdź dla innego miasta </span>
-		<img src="assets/images/arrow.svg" alt="" class="cta__icon" />
 	</div>
 </section>
