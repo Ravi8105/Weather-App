@@ -8,7 +8,6 @@ Weather application based on the free version of API from Weatherbit.io (I used 
 
 <br>
 
-[![WeatherApp](/src/assets/github/mockup.jpg)](https://chudzikm.github.io/WeatherApp-Angular/)
 
 
 ## How install and run project:
