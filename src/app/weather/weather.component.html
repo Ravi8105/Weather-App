@@ -5,35 +5,14 @@
 			<h1 class="content__heading">Weather Information Report</h1>
 			<h6 class="content__description">Based on City location Search Getting Weather Report</h6>
 			<form class="form">
-				<input
-					type="text"
-					class="form__input"
-					placeholder="Podaj miejscowość"
-					[(ngModel)]="location.city"
-					name="city"
-				/>
-				<button
-					class="form__btn"
-					data-target="weather"
-					(click)="startApp('inputBtn')"
-					(keydown.enter)="startApp('enter')"
-				>
+				<input type="text" class="form__input" placeholder="Podaj miejscowość" [(ngModel)]="location.city" name="city"/>
+				<button class="form__btn" data-target="weather" (click)="startApp('inputBtn')" (keydown.enter)="startApp('enter')" >
 					<img src="assets/images/icon-search.svg" alt="Search" />
 				</button>
 				<div class="geolocation">
 					<button class="geolocation__btn" (click)="startApp('geolocation')">
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							class="form__icon"
-							width="20"
-							height="20"
-							viewBox="0 0 24 24"
-							stroke-width="1.5"
-							stroke="white"
-							fill="none"
-							stroke-linecap="round"
-							stroke-linejoin="round"
-						>
+						<svg xmlns="http://www.w3.org/2000/svg" class="form__icon" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" 
+							stroke="white" fill="none" stroke-linecap="round" stroke-linejoin="round">
 							<path stroke="none" d="M0 0h24v24H0z" fill="none" />
 							<circle cx="12" cy="12" r="3" />
 							<circle cx="12" cy="12" r="8" />
